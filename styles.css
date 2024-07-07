@@ -302,3 +302,8 @@ img {
 #select {
   color: #29a6e6;
 }
+
+.seperator {
+  color: #0056b3;
+  padding: 10px;
+}
