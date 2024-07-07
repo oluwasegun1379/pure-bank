@@ -66,9 +66,12 @@ footer {
   text-align: center;
   flex-shrink: 0;
 }
-
+header {
+  border-bottom: 2px solid #077eba;
+}
 footer {
   margin-top: auto;
+  border-top: 2px solid #077eba;
 }
 
 main {
@@ -306,4 +309,36 @@ img {
 .seperator {
   color: #0056b3;
   padding: 10px;
+}
+
+.password-container {
+  position: relative;
+  width: 100%;
+}
+
+.password-input {
+  width: 100%;
+  padding: 0.5em;
+  padding-right: 2em; /* Space for the icon */
+  margin-bottom: 1em;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.toggle-password {
+  position: absolute;
+  top: 50%;
+  right: 0.5em;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+.toggle-password i {
+  font-size: 1em;
+  color: #007bff;
+}
+
+.toggle-password i:hover {
+  font-size: 1.2em;
+  color: #29a6e6;
 }
