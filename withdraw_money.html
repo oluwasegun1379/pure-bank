@@ -4,52 +4,36 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Withdraw Money</title>
-    <link
-      rel="stylesheet"
-      href="{{ url_for('static', filename='styles.css') }}"
-    />
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <header>
       <div class="header-container">
-        <img src="../static/images/bank_logo.png" alt="Pure Bank Logo" />
+        <img src="static/images/bank_logo.png" alt="Pure Bank Logo" />
         <div class="logo">
           <h1>Pure Bank</h1>
         </div>
         <nav class="main-nav">
           <ul>
-            <li><a href="{{ url_for('index') }}">Home</a></li>
-            <li><a href="{{ url_for('service') }}">Services</a></li>
-            <li><a href="{{ url_for('about') }}">About Us</a></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="about.html">About Us</a></li>
           </ul>
         </nav>
       </div>
-      <!-- <hr /> -->
     </header>
 
-    <div class="container">
-      <h1>Withdraw Money</h1>
-      {% with messages = get_flashed_messages(with_categories=True) %} {% if
-      messages %}
-      <ul class="flashes">
-        {% for category, message in messages %}
-        <li class="{{ category }}">{{ message }}</li>
-        {% endfor %}
-      </ul>
-      {% endif %} {% endwith %}
-
-      <form
-        action="{{ url_for('withdraw_money', account_id=account[0]) }}"
-        method="POST"
-      >
-        <label for="amount">Amount to Withdraw:</label>
-        <input type="number" id="amount" name="amount" required />
-        <button type="submit">Withdraw</button>
-      </form>
-      <a href="{{ url_for('account', account_id=account[0]) }}" class="button"
-        >Back to Account</a
-      >
-    </div>
+    <main>
+      <div class="container">
+        <h1>Withdraw Money</h1>
+        <form action="#" method="POST">
+          <label for="amount">Amount to Withdraw:</label>
+          <input type="number" id="amount" name="amount" required />
+          <button type="submit">Withdraw</button>
+        </form>
+        <a href="account.html" class="button">Back to Account</a>
+      </div>
+    </main>
 
     <footer>
       <div class="footer-container">
@@ -64,9 +48,7 @@
         <div class="contact-info">
           <p>
             Contact us at:
-            <a href="mailto:yusufshakiruoluwasegun@gmail.com"
-              >support@purebank.com</a
-            >
+            <a href="mailto:support@purebank.com">support@purebank.com</a>
           </p>
           <p>Call us: +234-904-679-8810</p>
         </div>

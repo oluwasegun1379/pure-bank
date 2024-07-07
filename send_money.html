@@ -3,56 +3,37 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Pure Bank</title>
-    <link
-      rel="stylesheet"
-      href="{{ url_for('static', filename='styles.css') }}"
-    />
+    <title>Send Money</title>
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <header>
       <div class="header-container">
-        <img src="../static/images/bank_logo.png" alt="Pure Bank Logo" />
+        <img src="static/images/bank_logo.png" alt="Pure Bank Logo" />
         <div class="logo">
           <h1>Pure Bank</h1>
         </div>
         <nav class="main-nav">
           <ul>
-            <li><a href="{{ url_for('index') }}">Home</a></li>
-            <li><a href="{{ url_for('service') }}">Services</a></li>
-            <li><a href="{{ url_for('about') }}">About Us</a></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="about.html">About Us</a></li>
           </ul>
         </nav>
       </div>
-      <!-- <hr /> -->
     </header>
 
     <main>
       <div class="container">
-        <h1>Account Details</h1>
-        <p>Name: <strong>{{ account[1] }}</strong></p>
-        <p>Username: <strong>{{ account[2] }}</strong></p>
-        <p>Balance: # <strong>{{ account[4] }}</strong></p>
-        <p>Account ID: <strong>{{ account[0] }} </strong></p>
-        <br>
-        <ul>
-          <li>
-            <a href="{{ url_for('withdraw_money', account_id=account[0]) }}"
-              >Withdraw Money</a
-            >
-          </li>
-          <li>
-            <a href="{{ url_for('deposit_money', account_id=account[0]) }}"
-              >Deposit Money</a
-            >
-          </li>
-          <li>
-            <a href="{{ url_for('send_money', sender_id=account[0]) }}"
-              >Send Money</a
-            >
-          </li>
-          <li><a href="{{ url_for('index') }}" class="logout">Log Out</a></li>
-        </ul>
+        <h1>Send Money</h1>
+        <form action="#" method="POST">
+          <label for="recipient_id">Recipient Account ID:</label>
+          <input type="number" id="recipient_id" name="recipient_id" required />
+          <label for="amount">Amount to Send:</label>
+          <input type="number" id="amount" name="amount" required />
+          <button type="submit">Send</button>
+        </form>
+        <a href="account.html" class="button">Back to Account</a>
       </div>
     </main>
 
@@ -69,9 +50,7 @@
         <div class="contact-info">
           <p>
             Contact us at:
-            <a href="mailto:yusufshakiruoluwasegun@gmail.com"
-              >support@purebank.com</a
-            >
+            <a href="mailto:support@purebank.com">support@purebank.com</a>
           </p>
           <p>Call us: +234-904-679-8810</p>
         </div>

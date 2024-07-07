@@ -1,4 +1,5 @@
 /* Reset default browser styles */
+html,
 body,
 h1,
 p,
@@ -12,8 +13,14 @@ button {
 }
 
 /* Body styling */
+html,
 body {
-  /* background-image: url("./images/background.jpg"); */
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+body {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -21,24 +28,26 @@ body {
   display: flex;
   flex-direction: column;
   animation: backgroundSlideshow 10s infinite alternate;
+  margin: 0;
+  padding: 0;
 }
 
 /* Background slideshow animation */
 @keyframes backgroundSlideshow {
   0% {
-    background-image: url("../static/images/background.jpg");
+    background-image: url("images/background.jpg");
   }
   50% {
-    background-image: url("../static/images/background2.jpg");
+    background-image: url("images/background2.jpg");
   }
   100% {
-    background-image: url("../static/images/background3.jpg");
+    background-image: url("images/background3.jpg");
   }
 }
 
 /* Container styling */
 .container {
-  max-width: 50%; /* Responsive width */
+  max-width: 50%;
   margin: 0 auto;
   padding: 15px;
   background-color: rgba(255, 255, 255, 0.8);
@@ -54,16 +63,11 @@ footer {
   background-color: rgba(255, 255, 255, 0.8);
   padding: 10px 30px;
   text-align: center;
+  flex-shrink: 0;
 }
 
-/* Footer section */
 footer {
   margin-top: auto;
-}
-
-header,
-footer {
-  flex-shrink: 0;
 }
 
 main {
@@ -163,9 +167,8 @@ nav {
 
 .logo h1 {
   text-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  font-size: 3.5rem; /* Use relative units */
+  font-size: 3.5rem;
   color: #29a6e6;
-  padding-left: 100px;
 }
 
 .container h1 {
@@ -209,16 +212,7 @@ label {
 }
 
 /* Form element styling */
-input[type="text"] {
-  color: #6c757d;
-  width: 70%;
-  padding: 10px;
-  border: 1px solid #29a6e6;
-  border-radius: 10px;
-  font-size: 1.2rem;
-}
-
-input[type="password"] {
+input {
   color: #6c757d;
   width: 70%;
   padding: 10px;
@@ -240,6 +234,7 @@ button:hover {
   background-color: #0056b3;
 }
 
+/* Flash messages */
 .error {
   color: red;
 }
@@ -257,15 +252,15 @@ a.logout:hover {
   color: #6c757d;
 }
 
-/* This will apply to all images */
+/* Image styling */
 img {
   width: 100px;
   height: 100px;
-  margin: -10px; /* Add margin around all images */
+  margin: -10px;
   cursor: pointer;
 }
 
-/* This will apply to password viewing */
+/* Password viewing styling */
 .password-container {
   position: relative;
   width: 100%;
@@ -274,7 +269,7 @@ img {
 .password-input {
   width: 100%;
   padding: 10px;
-  padding-right: 40px; /* Space for the icon */
+  padding-right: 40px;
   margin-bottom: 15px;
   border: 1px solid #ccc;
   border-radius: 4px;
@@ -300,4 +295,9 @@ img {
 
 #select {
   color: #29a6e6;
+}
+
+.seperator {
+  color: #6c757d;
+  padding: 10px;
 }

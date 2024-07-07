@@ -3,24 +3,21 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Pure Bank - Home</title>
-    <link
-      rel="stylesheet"
-      href="{{ url_for('static', filename='styles.css') }}"
-    />
+    <title>Account Details</title>
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <header>
       <div class="header-container">
-        <img src="../static/images/bank_logo.png" alt="Pure Bank Logo" />
+        <img src="static/images/bank_logo.png" alt="Pure Bank Logo" />
         <div class="logo">
           <h1>Pure Bank</h1>
         </div>
         <nav class="main-nav">
           <ul>
-            <li><a href="{{ url_for('index') }}">Home</a></li>
-            <li><a href="{{ url_for('service') }}">Services</a></li>
-            <li><a href="{{ url_for('about') }}">About Us</a></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="about.html">About Us</a></li>
           </ul>
         </nav>
       </div>
@@ -28,14 +25,11 @@
 
     <main>
       <div class="container">
-        <h1>Welcome to Pure Bank</h1>
-        <p class="select">Select an option</p>
-        <ul>
-          <li>
-            <a href="{{ url_for('create_account') }}">Open a new account</a>
-          </li>
-          <li><a href="{{ url_for('login') }}">Log in to your account</a></li>
-        </ul>
+        <h1>Account Details</h1>
+        <p>Account ID: {{ account_id }}</p>
+        <p>Balance: ${{ balance }}</p>
+        <a href="send_money.html" class="button">Send Money</a>
+        <a href="withdraw_money.html" class="button">Withdraw Money</a>
       </div>
     </main>
 
@@ -52,9 +46,7 @@
         <div class="contact-info">
           <p>
             Contact us at:
-            <a href="mailto:yusufshakiruoluwasegun@gmail.com"
-              >support@purebank.com</a
-            >
+            <a href="mailto:support@purebank.com">support@purebank.com</a>
           </p>
           <p>Call us: +234-904-679-8810</p>
         </div>
