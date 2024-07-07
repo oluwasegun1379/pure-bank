@@ -210,6 +210,12 @@ a {
   font-size: 1em;
 }
 
+main div ul li a {
+  text-decoration: none;
+  color: #29a6e6;
+  font-size: 1.5em;
+}
+
 a:hover {
   text-decoration: underline;
 }
@@ -305,12 +311,20 @@ img {
 #select {
   color: #29a6e6;
 }
+#option {
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
 
 .seperator {
   color: #0056b3;
   padding: 10px;
 }
 
+.seperate {
+  color: #0056b3;
+  padding: 40px;
+}
 .password-container {
   position: relative;
   width: 100%;
@@ -341,4 +355,58 @@ img {
 .toggle-password i:hover {
   font-size: 1.2em;
   color: #29a6e6;
+}
+
+/* Account Page Stylings */
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  text-align: center;
+  color: #6c757d;
+  margin-bottom: 20px;
+}
+
+.account-info {
+  background-color: #fff;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.account-info p {
+  color: #29a6e6;
+  margin: 10px 0;
+  font-size: 18px;
+}
+
+.account-info p span {
+  float: right;
+}
+
+.buttons {
+  text-align: center;
+}
+
+.button {
+  display: inline-block;
+  padding: 10px 20px;
+  margin: 0 10px;
+  background-color: #007bff;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: #0056b3;
 }

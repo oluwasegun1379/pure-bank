@@ -1,3 +1,4 @@
+// function to toggle password visibility
 function togglePasswordVisibility() {
   const passwordInput = document.getElementById("password");
   const eyeIcon = document.getElementById("eye-icon");
@@ -13,31 +14,33 @@ function togglePasswordVisibility() {
   }
 }
 
-function toggleConfirmPasswordVisibility() {
-  const confirmPasswordInput = document.getElementById("confirm_password");
-  const eyeIcon = document.getElementById("confirm-eye-icon");
+// Predefined username and password = "Ryan1211" and password = "Ryan1#"
+const savedUsername = "Ryan1211";
+const savedPassword = "Ryan1#";
 
-  if (confirmPasswordInput.type === "password") {
-    confirmPasswordInput.type = "text";
-    eyeIcon.classList.remove("fa-eye");
-    eyeIcon.classList.add("fa-eye-slash");
+// Get the form element
+const form = document.getElementById("loginForm");
+
+// Add event listener to handle the form submission
+form.addEventListener("submit", function (event) {
+  // Prevent the form from submitting
+  event.preventDefault();
+
+  // Get the entered username and password
+  const inputUsername = document.getElementById("username").value;
+  const inputPassword = document.getElementById("password").value;
+
+  // Check if the entered username and password match the saved ones
+  if (inputUsername === savedUsername && inputPassword === savedPassword) {
+    // If credentials match, redirect to a success page
+    window.location.href = "account.html";
   } else {
-    confirmPasswordInput.type = "password";
-    eyeIcon.classList.remove("fa-eye-slash");
-    eyeIcon.classList.add("fa-eye");
+    // If credentials do not match, display an error message
+    Toastify({
+      text: "Wrong username or password.",
+      duration: 3000, // Duration in milliseconds
+      gravity: "bottom", // Position of the toast
+      backgroundColor: "#ff6347", // Background color
+    }).showToast();
   }
-}
-
-function validateForm() {
-  const password = document.getElementById("password").value;
-  const confirmPassword = document.getElementById("confirm_password").value;
-  const errorElement = document.getElementById("password-error");
-
-  if (password !== confirmPassword) {
-    errorElement.style.display = "block";
-    return false; // Prevent form submission
-  } else {
-    errorElement.style.display = "none";
-    return true; // Allow form submission
-  }
-}
+});

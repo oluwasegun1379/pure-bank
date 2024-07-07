@@ -9,6 +9,24 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
     />
+    <style>
+      .password-container {
+        position: relative;
+        display: inline-block;
+      }
+
+      .password-input {
+        padding-right: 30px;
+      }
+
+      .toggle-password {
+        position: absolute;
+        right: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+        cursor: pointer;
+      }
+    </style>
   </head>
   <body>
     <header>
@@ -68,6 +86,7 @@
               <i id="eye-icon1" class="fa fa-eye"></i>
             </span>
           </div>
+          <br /><br />
           <div class="password-container">
             <input
               type="password"
@@ -84,6 +103,7 @@
               <i id="eye-icon2" class="fa fa-eye"></i>
             </span>
           </div>
+          <br /><br />
           <button type="submit">Submit</button>
         </form>
       </div>
@@ -104,7 +124,7 @@
             Contact us at:
             <a href="mailto:support@purebank.com">support@purebank.com</a>
           </p>
-          <p>Call us: +234-904-679-8810</p>
+          <p>WhatsApp us: +1 212-555-0198</p>
         </div>
         <div class="social-media">
           <a href="#">Facebook</a>
@@ -116,5 +136,22 @@
         </div>
       </div>
     </footer>
+
+    <script>
+      function togglePasswordVisibility(passwordInputId, eyeIconId) {
+        const passwordInput = document.getElementById(passwordInputId);
+        const eyeIcon = document.getElementById(eyeIconId);
+
+        if (passwordInput.type === "password") {
+          passwordInput.type = "text";
+          eyeIcon.classList.remove("fa-eye");
+          eyeIcon.classList.add("fa-eye-slash");
+        } else {
+          passwordInput.type = "password";
+          eyeIcon.classList.remove("fa-eye-slash");
+          eyeIcon.classList.add("fa-eye");
+        }
+      }
+    </script>
   </body>
 </html>

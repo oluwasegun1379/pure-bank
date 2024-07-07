@@ -5,11 +5,76 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Account Details</title>
     <link rel="stylesheet" href="styles.css" />
+    <!-- Font Awesome CDN for icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <style>
+      /* Styles moved to styles.css for cleaner separation */
+      .contain {
+        max-width: 50%; /* Adjusted to be responsive */
+        margin: 0 auto;
+        padding: 20px;
+        background-color: #f9f9f9;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+
+      h1 {
+        text-align: center;
+        color: #6c757d;
+        margin-bottom: 20px;
+      }
+
+      .account-info {
+        background-color: #fff;
+        padding: 15px;
+        border-radius: 8px;
+        margin-bottom: 20px;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+      }
+
+      .account-info p {
+        color: #29a6e6;
+        margin: 10px 0;
+        font-size: 18px;
+      }
+
+      .account-info p span {
+        float: right;
+      }
+
+      .buttons {
+        text-align: center;
+      }
+
+      .button {
+        display: inline-block;
+        padding: 10px 20px;
+        margin: 0 10px;
+        background-color: #007bff;
+        color: #fff;
+        text-decoration: none;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+      }
+
+      .button:hover {
+        background-color: #0056b3;
+      }
+
+      p {
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+    </style>
   </head>
   <body>
     <header>
       <div class="header-container">
-        <img src="static/images/bank_logo.png" alt="Pure Bank Logo" />
+        <img src="images/bank_logo.png" alt="Pure Bank Logo" />
         <div class="logo">
           <h1>Pure Bank</h1>
         </div>
@@ -22,21 +87,46 @@
               <a href="services.html">Services</a
               ><span class="seperator"> |</span>
             </li>
-            <li>
-              <a href="about.html">About Us</a>
-            </li>
+            <li><a href="about.html">About Us</a></li>
           </ul>
         </nav>
       </div>
     </header>
 
     <main>
-      <div class="container">
+      <div class="contain">
         <h1>Account Details</h1>
-        <p>Account ID: {{ account_id }}</p>
-        <p>Balance: ${{ balance }}</p>
-        <a href="send_money.html" class="button">Send Money</a>
-        <a href="withdraw_money.html" class="button">Withdraw Money</a>
+        <div class="account-info">
+          <p>
+            <strong>Account ID:</strong>
+            <span class="account-id">5678901234</span>
+          </p>
+          <p>
+            <strong>Checking Account:</strong>
+            <span class="checking-balance">$ 2,000,000.00</span>
+            <span
+              class="toggle-visibility"
+              onclick="toggleVisibility('checking-balance', 'eye-icon1')"
+              ><i class="fa fa-eye" id="eye-icon1"></i
+            ></span>
+          </p>
+          <p>
+            <strong>Savings Account:</strong>
+            <span class="savings-balance">$ 40,000,000.00</span>
+            <span
+              class="toggle-visibility"
+              onclick="toggleVisibility('savings-balance', 'eye-icon2')"
+              ><i class="fa fa-eye" id="eye-icon2"></i
+            ></span>
+          </p>
+        </div>
+        <div class="buttons">
+          <a href="send_money.html" class="button">Send Money</a>
+          <a href="withdraw_money.html" class="button">Withdraw Money</a>
+          <a href="transaction_history.html" class="button"
+            >Transaction History</a
+          >
+        </div>
       </div>
     </main>
 
@@ -55,7 +145,7 @@
             Contact us at:
             <a href="mailto:support@purebank.com">support@purebank.com</a>
           </p>
-          <p>Call us: +234-904-679-8810</p>
+          <p>WhatsApp us: +1 212-555-0198</p>
         </div>
         <div class="social-media">
           <a href="#">Facebook</a>
@@ -67,5 +157,27 @@
         </div>
       </div>
     </footer>
+
+    <script>
+      function toggleVisibility(balanceClass, eyeIconId) {
+        const balanceElement = document.querySelector(`.${balanceClass}`);
+        const eyeIcon = document.getElementById(eyeIconId);
+
+        if (balanceElement.textContent === "******") {
+          balanceElement.textContent =
+            balanceElement.getAttribute("data-balance");
+          eyeIcon.classList.remove("fa-eye-slash");
+          eyeIcon.classList.add("fa-eye");
+        } else {
+          balanceElement.setAttribute(
+            "data-balance",
+            balanceElement.textContent
+          );
+          balanceElement.textContent = "******";
+          eyeIcon.classList.remove("fa-eye");
+          eyeIcon.classList.add("fa-eye-slash");
+        }
+      }
+    </script>
   </body>
 </html>
