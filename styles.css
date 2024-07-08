@@ -62,7 +62,12 @@ body {
 /* Header and Footer styling */
 header,
 footer {
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.5
+  ); /* Adjust the alpha value for transparency */
   padding: 0.5em 1.5em;
   text-align: center;
   flex-shrink: 0;
@@ -364,7 +369,7 @@ img {
   max-width: 600px;
   margin: 0 auto;
   padding: 20px;
-  background-color: #f9f9f9;
+  background-color: rgba(255, 255, 255, 0.8);
   border: 1px solid #ddd;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
