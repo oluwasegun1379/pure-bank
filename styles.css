@@ -238,7 +238,7 @@ input {
 
 button {
   padding: 0.5em 1em;
-  background-color: #007bff;
+  background-color: #29a6e6;
   color: #fff;
   border: none;
   border-radius: 4px;
@@ -246,7 +246,7 @@ button {
 }
 
 button:hover {
-  background-color: #0056b3;
+  background-color: #1073a5;
 }
 
 /* Flash messages */
@@ -397,16 +397,17 @@ h1 {
 }
 
 .button {
-  display: inline-block;
+  font-size: 100%;
+  display: block; /* Ensures buttons are arranged vertically */
+  width: 50%; /* Makes buttons occupy 80% of the container's width */
+  margin: 10px auto; /* Centers the buttons horizontally and adds space between them */
   padding: 10px 20px;
-  margin: 0 10px;
-  background-color: #007bff;
+  background-color: #29a6e6;
   color: #fff;
   text-decoration: none;
   border-radius: 5px;
   transition: background-color 0.3s ease;
 }
-
 .button:hover {
-  background-color: #0056b3;
+  background-color: #1073a5;
 }
