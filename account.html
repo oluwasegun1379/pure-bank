@@ -39,7 +39,7 @@
       .account-info p {
         color: #29a6e6;
         margin: 10px 0;
-        font-size: 14px;
+        font-size: 100%;
       }
 
       .account-info p span {
@@ -51,9 +51,11 @@
       }
 
       .button {
-        display: inline-block;
+        font-size: 100%;
+        display: block; /* Ensures buttons are arranged vertically */
+        width: 50%; /* Makes buttons occupy 80% of the container's width */
+        margin: 10px auto; /* Centers the buttons horizontally and adds space between them */
         padding: 10px 20px;
-        margin: 0 10px;
         background-color: #29a6e6;
         color: #fff;
         text-decoration: none;
@@ -62,7 +64,7 @@
       }
 
       .button:hover {
-        background-color: #0056b3;
+        background-color: #1073a5;
       }
 
       p {
@@ -121,11 +123,11 @@
           </p>
         </div>
         <div class="buttons">
-          <a href="send_money.html" class="button">Send Money</a><br>
-          <a href="withdraw_money.html" class="button">Withdraw Money</a><br>
+          <a href="send_money.html" class="button">Send Money</a><br />
+          <a href="withdraw_money.html" class="button">Withdraw Money</a><br />
           <a href="transaction_history.html" class="button"
             >Transaction History</a
-          ><br>
+          ><br />
         </div>
       </div>
     </main>
