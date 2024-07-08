@@ -411,6 +411,14 @@
           icon.className = "fa fa-eye";
         }
       }
+      // Sort transactions by date in descending order
+      transactionData.sort((a, b) => {
+        const dateA = new Date(a.date);
+        const dateB = new Date(b.date);
+        return dateB - dateA;
+      });
+      
+      console.log(transactionData);
     </script>
   </body>
 </html>
