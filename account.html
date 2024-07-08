@@ -76,6 +76,47 @@
         color: #29a6e6;
         margin-bottom: 20px;
       }
+
+      .features-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+      }
+
+      .feature {
+        width: 30%; /* Adjust as necessary for your layout */
+        text-align: center;
+        color: #29a6e6;
+        cursor: pointer;
+      }
+
+      .feature .icon {
+        width: 60px; /* Adjust icon size as needed */
+        height: 60px;
+        line-height: 60px;
+        background-color: #29a6e6; /* Example background color */
+        color: white; /* Example text color */
+        font-size: 24px; /* Adjust font size as needed */
+        font-weight: bold;
+        border-radius: 50%; /* Rounded shape for the icon */
+        margin: 0 auto 10px; /* Center and add bottom margin */
+      }
+
+      .feature .icon:hover {
+        background-color: #1073a5;
+      }
+      /* Responsive adjustments */
+      @media (max-width: 768px) {
+        .feature {
+          width: 45%; /* Two features per row on smaller screens */
+        }
+      }
+
+      @media (max-width: 480px) {
+        .feature {
+          width: 100%; /* One feature per row on mobile devices */
+        }
+      }
     </style>
   </head>
   <body>
@@ -137,6 +178,34 @@
             >Transaction History</a
           ><br />
         </div>
+      </div>
+
+      <div class="features-container">
+        <div class="feature">
+          <div class="icon">A</div>
+          <p>Refer & Earn</p>
+        </div>
+        <div class="feature">
+          <div class="icon">DB</div>
+          <p>Bet & Win</p>
+        </div>
+        <div class="feature">
+          <div class="icon">TV</div>
+          <p>Subscriptions</p>
+        </div>
+        <div class="feature">
+          <div class="icon">S</div>
+          <p>Savings</p>
+        </div>
+        <div class="feature">
+          <div class="icon">L</div>
+          <p>Loan</p>
+        </div>
+        <div class="feature">
+          <div class="icon">JW</div>
+          <p>Join and Win Game Center</p>
+        </div>
+        <!-- Add more features as needed -->
       </div>
     </main>
 
