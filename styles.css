@@ -67,11 +67,11 @@ footer {
   flex-shrink: 0;
 }
 header {
-  border-bottom: 1px solid #077eba;
+  border-bottom: 1px solid #29a6e6;
 }
 footer {
   margin-top: auto;
-  border-top: 1px solid #077eba;
+  border-top: 1px solid #29a6e6;
 }
 
 main {
