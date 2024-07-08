@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Account Details</title>
+    <title>Accounts</title>
     <link rel="stylesheet" href="styles.css" />
     <!-- Font Awesome CDN for icons -->
     <link
@@ -72,7 +72,7 @@
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
       }
       #account-name {
-        font-size: 150%;
+        font-size: 100%;
         color: #29a6e6;
         margin-bottom: 20px;
       }
@@ -90,16 +90,34 @@
         cursor: pointer;
       }
 
-      .feature .icon {
+      .features-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around; /* Adjusts space around items */
+        gap: 20px; /* Adjust gap between items */
+      }
+
+      .feature {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        flex: 1 1 45%; /* Adjusts flex-basis for responsiveness */
+        max-width: 45%; /* Ensures two items per line */
+        box-sizing: border-box;
+        margin-bottom: 20px; /* Adjust bottom margin */
+      }
+
+      .icon {
         width: 60px; /* Adjust icon size as needed */
         height: 60px;
         line-height: 60px;
         background-color: #29a6e6; /* Example background color */
-        color: white; /* Example text color */
+        color: #6c757d; /* Example text color */
         font-size: 24px; /* Adjust font size as needed */
         font-weight: bold;
         border-radius: 50%; /* Rounded shape for the icon */
         margin: 0 auto 10px; /* Center and add bottom margin */
+        text-align: center; /* Center text within icon */
       }
 
       .feature .icon:hover {
@@ -115,6 +133,70 @@
       @media (max-width: 480px) {
         .feature {
           width: 100%; /* One feature per row on mobile devices */
+        }
+      }
+
+      /* Profile popup styles */
+      #profile-info {
+        display: none;
+        position: absolute;
+        top: 80px;
+        left: 10%;
+        width: 50%;
+        padding: 20px;
+        background-color: #29a6e6;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        z-index: 1000;
+      }
+
+      #profile-info p {
+        margin: 10px 0;
+        font-size: 1rem;
+        color: green;
+        font-size: 14px;
+      }
+
+      #profile-info p strong {
+        color: #6c757d;
+      }
+
+      #profile-info .close-btn {
+        display: block;
+        text-align: right;
+        font-size: 16px;
+        cursor: pointer;
+        color: #6c757d;
+      }
+
+      .profile-img {
+        cursor: pointer;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        display: flex;
+        top: 20px;
+        left: 20px;
+      }
+
+      .verified {
+        color: green;
+        margin-left: 5px;
+      }
+
+      /* Responsive adjustments for profile info */
+      @media (max-width: 768px) {
+        #profile-info {
+          width: 70%;
+          left: 15%;
+        }
+      }
+
+      @media (max-width: 480px) {
+        #profile-info {
+          width: 90%;
+          left: 5%;
         }
       }
     </style>
@@ -143,15 +225,34 @@
 
     <main>
       <div class="contain">
-        <h1>Account Details</h1>
-        <div class="account-info">
-          <p id="account-name">
-            <strong>Welcome! Ryan Williams</strong>
-          </p>
+        <h1>Accounts</h1>
+        <img
+          src="images/profile.jpg"
+          alt="Profile"
+          class="profile-img"
+          onclick="toggleProfile()"
+        />
+        <div id="profile-info">
+          <span class="close-btn" onclick="toggleProfile()">&uarr; Back</span>
+          <p><strong>Full Name:</strong> Ryan Williams</p>
+          <p><strong>Contact:</strong> +1 562-587-0197</p>
+          <p><strong>Nick Name:</strong> Ryan</p>
+          <p><strong>Gender:</strong> Male</p>
+          <p><strong>Date of Birth:</strong> **-**-07</p>
           <p>
+            <strong>Email:</strong> ryanwilliams2109641@gmail.com
+            <i class="fa fa-check-circle verified"></i>
+          </p>
+          <p><strong>Account Number:</strong> 5678901234</p>
+        </div>
+        <p id="account-name">
+          <strong>Hi, Ryan</strong>
+        </p>
+        <div class="account-info">
+          <!-- <p>
             <strong>Account ID:</strong>
             <span class="account-id">5678901234</span>
-          </p>
+          </p> -->
           <p>
             <strong>Checking Account:</strong>
             <span class="checking-balance">$ 2,000,000.00</span>
@@ -162,7 +263,7 @@
             ></span>
           </p>
           <p>
-            <strong>Savings Account:</strong>
+            <strong>Available Balance:</strong>
             <span class="savings-balance">$ 40,000,000.00</span>
             <span
               class="toggle-visibility"
@@ -256,6 +357,12 @@
           eyeIcon.classList.remove("fa-eye");
           eyeIcon.classList.add("fa-eye-slash");
         }
+      }
+
+      function toggleProfile() {
+        const profileInfo = document.getElementById("profile-info");
+        profileInfo.style.display =
+          profileInfo.style.display === "none" ? "block" : "none";
       }
     </script>
   </body>
