@@ -139,9 +139,9 @@
       /* Profile popup styles */
       #profile-info {
         display: none;
-        position: absolute;
+        /* position: absolute; */
         top: 80px;
-        left: 10%;
+        left: 100%;
         width: 50%;
         padding: 20px;
         background-color: #29a6e6;
@@ -199,6 +199,12 @@
           left: 5%;
         }
       }
+      #number {
+        margin: 10px 0;
+        font-size: 1rem;
+        color: green;
+        font-size: 14px;
+      }
     </style>
   </head>
   <body>
@@ -235,7 +241,7 @@
         <div id="profile-info">
           <span class="close-btn" onclick="toggleProfile()">&uarr; Back</span>
           <p><strong>Full Name:</strong> Ryan Williams</p>
-          <p><strong>Contact:</strong> +1 562-587-0197</p>
+          <p id="number"><strong>Contact:</strong> +1 562-587-0197</p>
           <p><strong>Nick Name:</strong> Ryan</p>
           <p><strong>Gender:</strong> Male</p>
           <p><strong>Date of Birth:</strong> **-**-07</p>
@@ -243,7 +249,7 @@
             <strong>Email:</strong> ryanwilliams2109641@gmail.com
             <i class="fa fa-check-circle verified"></i>
           </p>
-          <p><strong>Account Number:</strong> 5678901234</p>
+          <p id="number"><strong>Account Number:</strong> 5678901234</p>
         </div>
         <p id="account-name">
           <strong>Hi, Ryan</strong>
