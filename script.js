@@ -15,8 +15,8 @@ function togglePasswordVisibility() {
 }
 
 // Predefined username and password = "Ryan1211" and password = "Ryan1#"
-const savedUsername = "James1211";
-const savedPassword = "James1#";
+const savedUsername = "Ryanwilliams89";
+const savedPassword = "James1#Ja19le64neRyan!";
 
 // Get the form element
 const form = document.getElementById("loginForm");

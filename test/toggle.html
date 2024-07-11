@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tutorial</title>
+    <!-- Add FontAwesome CDN for the eye icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+  </head>
+  <body>
+    <p>
+      <strong>Amount to be toggled: </strong>
+      <span class="amount" data-balance="# 200,000,000.00">*******</span>
+      <span class="toggle" onclick="toggleVisibility('amount', 'eye-icon')">
+        <i class="fa fa-eye" id="eye-icon"></i>
+      </span>
+    </p>
+    <script>
+      function toggleVisibility(amount, eye_icon) {
+        const balanceElement = document.querySelector(`.${amount}`);
+        const eyeIcon = document.getElementById(eye_icon);
+
+        if (balanceElement.textContent === "*******") {
+          balanceElement.textContent =
+            balanceElement.getAttribute("data-balance");
+          eyeIcon.classList.remove("fa-eye-slash");
+          eyeIcon.classList.add("fa-eye");
+        } else {
+          balanceElement.setAttribute(
+            "data-balance",
+            balanceElement.textContent
+          );
+          balanceElement.textContent = "*******";
+          eyeIcon.classList.remove("fa-eye");
+          eyeIcon.classList.add("fa-eye-slash");
+        }
+      }
+    </script>
+  </body>
+</html>
