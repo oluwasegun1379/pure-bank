@@ -277,147 +277,64 @@
               {
                 date: "April 1, 2024",
                 description: "Credit card payment",
-                reference: "TRX-5678901230",
+                reference: "TRX-9876543210",
+                amount: "390.00",
+              },
+              {
+                date: "March 30, 2024",
+                description: "Monthly Subscription",
+                reference: "TRX-4561237890",
                 amount: "200.00",
               },
               {
                 date: "March 25, 2024",
-                description: "Mobile phone bill",
-                reference: "TRX-2468135790",
-                amount: "120.00",
+                description: "Electricity Bill",
+                reference: "TRX-7890123456",
+                amount: "130.00",
               },
               {
                 date: "March 20, 2024",
-                description: "Charity donation",
-                reference: "TRX-1357924680",
-                amount: "100.00",
+                description: "Grocery Shopping",
+                reference: "TRX-1234567890",
+                amount: "160.00",
               },
               {
                 date: "March 15, 2024",
-                description: "ATM Withdrawal",
-                reference: "TRX-3579246801",
-                amount: "70.00",
-                              {
+                description: "Restaurant Payment",
+                reference: "TRX-4567890123",
+                amount: "80.00",
+              },
+              {
                 date: "March 10, 2024",
-                description: "Online shopping",
-                reference: "TRX-1357924680",
-                amount: "420.00",
+                description: "Pet Store Purchase",
+                reference: "TRX-1597534560",
+                amount: "60.00",
               },
               {
                 date: "March 5, 2024",
-                description: "Grocery purchase",
-                reference: "TRX-5678901230",
-                amount: "260.00",
+                description: "Car Repair",
+                reference: "TRX-3579246801",
+                amount: "400.00",
               },
               {
                 date: "March 1, 2024",
-                description: "Utility bill",
-                reference: "TRX-2468135790",
-                amount: "180.00",
-              },
-              {
-                date: "February 28, 2024",
-                description: "Rent payment",
+                description: "Gift from John Doe",
                 reference: "TRX-1357924680",
-                amount: "1,000.00",
+                amount: "1000.00",
               },
-              {
-                date: "February 25, 2024",
-                description: "Car insurance",
-                reference: "TRX-3579246801",
-                amount: "300.00",
-              },
-              {
-                date: "February 20, 2024",
-                description: "Gas station",
-                reference: "TRX-2468135790",
-                amount: "100.00",
-              },
-              {
-                date: "February 15, 2024",
-                description: "Restaurant bill",
-                reference: "TRX-1357924680",
-                amount: "75.00",
-              },
-              {
-                date: "February 10, 2024",
-                description: "Movie tickets",
-                reference: "TRX-5678901230",
-                amount: "45.00",
-              },
-              {
-                date: "February 5, 2024",
-                description: "Health insurance",
-                reference: "TRX-2468135790",
-                amount: "320.00",
-              },
-              {
-                date: "February 1, 2024",
-                description: "Gym membership",
-                reference: "TRX-1357924680",
-                amount: "90.00",
-              },
-              {
-                date: "January 31, 2024",
-                description: "Coffee shop",
-                reference: "TRX-3579246801",
-                amount: "25.00",
-              },
-              {
-                date: "January 25, 2024",
-                description: "Music subscription",
-                reference: "TRX-2468135790",
-                amount: "15.00",
-              },
-              {
-                date: "January 20, 2024",
-                description: "Bookstore",
-                reference: "TRX-1357924680",
-                amount: "50.00",
-              },
-              {
-                date: "January 15, 2024",
-                description: "Flight ticket",
-                reference: "TRX-5678901230",
-                amount: "350.00",
-              },
-              {
-                date: "January 10, 2024",
-                description: "Hotel stay",
-                reference: "TRX-2468135790",
-                amount: "600.00",
-              },
-              {
-                date: "January 5, 2024",
-                description: "New Year Celebration",
-                reference: "TRX-1357924680",
-                amount: "200.00",
-              },
-              {
-                date: "January 1, 2024",
-                description: "Birthday Gift",
-                reference: "TRX-3579246801",
-                amount: "100.00",
-              }
             ];
 
-            const container = document.querySelector('.transaction-history');
-
             transactionData.forEach((transaction) => {
-              const item = document.createElement('div');
-              item.classList.add('transaction-item');
-
-              const details = document.createElement('div');
-              details.classList.add('transaction-details');
-
-              details.innerHTML = `
-                <span>${transaction.date} - ${transaction.description}</span>
-                <span>${transaction.reference}</span>
-                <span class="transaction-amount">${transaction.amount}</span>
-              `;
-
-              item.appendChild(details);
-              container.appendChild(item);
+              document.write(`
+                <div class="transaction-item">
+                  <div class="transaction-details">
+                    <span class="transaction-date">${transaction.date}</span>
+                    <span class="transaction-description">${transaction.description}</span>
+                    <span class="transaction-reference">${transaction.reference}</span>
+                    <span class="transaction-amount">${transaction.amount}</span>
+                  </div>
+                </div>
+              `);
             });
           </script>
         </div>
@@ -428,29 +345,27 @@
       <div class="footer-container">
         <div class="footer-links">
           <ul>
-            <li><a href="privacy.html">Privacy Policy</a></li>
-            <li><a href="terms.html">Terms & Conditions</a></li>
-            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="#privacy">Privacy Policy</a></li>
+            <li><a href="#terms">Terms of Service</a></li>
+            <li><a href="#help">Help & Support</a></li>
+            <li><a href="#faq">FAQ</a></li>
           </ul>
         </div>
         <div class="contact-info">
-          <p>Email: <a href="mailto:support@purebank.com">support@purebank.com</a></p>
-          <p>Phone: +1 234 567 890</p>
+          <p>
+            Contact us at:
+            <a href="mailto:support@purebank.com">support@purebank.com</a>
+          </p>
+          <p>WhatsApp us: +1 212-555-0198</p>
         </div>
         <div class="social-media">
-          <a href="https://facebook.com/purebank" target="_blank"
-            ><i class="fab fa-facebook-f"></i
-          ></a>
-          <a href="https://twitter.com/purebank" target="_blank"
-            ><i class="fab fa-twitter"></i
-          ></a>
-          <a href="https://linkedin.com/company/purebank" target="_blank"
-            ><i class="fab fa-linkedin-in"></i
-          ></a>
+          <a href="#">Facebook</a>
+          <a href="#">Twitter</a>
+          <a href="#">LinkedIn</a>
         </div>
-      </div>
-      <div class="copyright">
-        <p>&copy; 2024 Pure Bank. All rights reserved.</p>
+        <div class="copyright">
+          <p>&copy; 2024 Pure Bank. All rights reserved.</p>
+        </div>
       </div>
     </footer>
   </body>
