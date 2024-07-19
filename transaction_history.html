@@ -45,7 +45,7 @@
       }
 
       .transaction-details {
-        display: flex; /* Use flexbox for better control */
+        display: flex;
         justify-content: space-between;
         align-items: center;
         color: #29a6e6;
@@ -53,11 +53,11 @@
       }
 
       .transaction-amount {
-        display: block; /* Ensure it's a block-level element */
-        text-align: right; /* Align text to the right */
+        display: block;
+        text-align: right;
         font-weight: bold;
         color: #29a6e6;
-        flex-shrink: 0; /* Prevent shrinking */
+        flex-shrink: 0;
       }
 
       .transaction-actions {
@@ -128,8 +128,7 @@
               <a href="index.html">Home</a><span class="separator"> |</span>
             </li>
             <li>
-              <a href="services.html">Services</a
-              ><span class="separator"> |</span>
+              <a href="services.html">Services</a><span class="separator"> |</span>
             </li>
             <li><a href="about.html">About Us</a></li>
           </ul>
@@ -141,391 +140,317 @@
       <div class="contain">
         <h1>Transaction History</h1>
         <div class="transaction-history">
-          <!-- Generate More Transactions -->
           <script>
             const transactionData = [
               {
-                date: "June 30, 2024",
-                description: "Payment description to IRS",
+                date: "July 17, 2024",
+                description: "Payment from Defi Yield Farming Limited",
                 reference: "TRX-9876543210",
-                amount: "1,500,000.00",
+                amount: "4200.00",
               },
               {
                 date: "June 29, 2024",
                 description: "Groundhog Day purchase",
                 reference: "TRX-4561237890",
-                amount: "1,800,000.00",
+                amount: "800.00",
               },
               {
                 date: "June 28, 2024",
                 description: "Winter Sale Purchase",
                 reference: "TRX-7890123456",
-                amount: "2,300,000.00",
+                amount: "230.00",
               },
               {
                 date: "June 25, 2024",
                 description: "Christmas Gift",
                 reference: "TRX-1234567890",
-                amount: "9,500,000.00",
+                amount: "950.00",
               },
               {
                 date: "June 20, 2024",
                 description: "Thanksgiving Donation",
                 reference: "TRX-4567890123",
-                amount: "7,200,000.00",
+                amount: "720.00",
               },
               {
                 date: "June 15, 2024",
                 description: "Halloween purchase",
                 reference: "TRX-1597534560",
-                amount: "1,400,000.00",
+                amount: "140.00",
               },
               {
                 date: "June 10, 2024",
                 description: "Labor Day purchase",
                 reference: "TRX-3579246801",
-                amount: "2,800,000.00",
+                amount: "280.00",
               },
               {
                 date: "June 5, 2024",
                 description: "Summer Vacation Expenses",
                 reference: "TRX-1357924680",
-                amount: "6,500,000.00",
+                amount: "650.00",
               },
               {
                 date: "June 1, 2024",
                 description: "Independence Day purchase",
                 reference: "TRX-7894561230",
-                amount: "2,900,000.00",
+                amount: "290.00",
               },
               {
                 date: "May 30, 2024",
                 description: "Father's Day Gift",
                 reference: "TRX-2468013579",
-                amount: "3,300,000.00",
+                amount: "330.00",
               },
               {
                 date: "May 25, 2024",
                 description: "Memorial Day purchase",
                 reference: "TRX-1357924680",
-                amount: "4,700,000.00",
+                amount: "470.00",
               },
               {
                 date: "May 20, 2024",
                 description: "Earth Day Donation",
                 reference: "TRX-9876543210",
-                amount: "2,200,000.00",
+                amount: "220.00",
               },
               {
                 date: "May 15, 2024",
                 description: "St. Patrick's Day purchase",
                 reference: "TRX-4561237890",
-                amount: "1,700,000.00",
+                amount: "170.00",
               },
               {
                 date: "May 10, 2024",
                 description: "Valentine Gift",
                 reference: "TRX-7890123456",
-                amount: "5,500,000.00",
+                amount: "550.00",
               },
               {
                 date: "May 5, 2024",
                 description: "New Year Bonus",
                 reference: "TRX-1234567890",
-                amount: "9,000,000.00",
+                amount: "900.00",
               },
               {
                 date: "May 1, 2024",
-                description: "Gift received from Jane Doe",
+                description: "Gift from Jane Doe",
                 reference: "TRX-4567890123",
-                amount: "8,800,000.00",
+                amount: "880.00",
               },
               {
                 date: "April 30, 2024",
                 description: "ATM Withdrawal",
                 reference: "TRX-1597534560",
-                amount: "1,100,000.00",
+                amount: "110.00",
               },
               {
                 date: "April 25, 2024",
                 description: "Interest credited",
                 reference: "TRX-3579246801",
-                amount: "2,500,000.00",
+                amount: "250.00",
               },
               {
                 date: "April 20, 2024",
                 description: "Stock purchase",
                 reference: "TRX-1357924680",
-                amount: "7,500,000.00",
+                amount: "750.00",
               },
               {
                 date: "April 15, 2024",
                 description: "Dividend received",
                 reference: "TRX-7894561230",
-                amount: "6,000,000.00",
+                amount: "600.00",
               },
               {
                 date: "April 10, 2024",
                 description: "Refund from XYZ Store",
                 reference: "TRX-2468013579",
-                amount: "4,500,000.00",
+                amount: "450.00",
               },
               {
                 date: "April 5, 2024",
                 description: "Loan repayment",
                 reference: "TRX-1357924680",
-                amount: "5,000,000.00",
+                amount: "500.00",
               },
               {
                 date: "April 1, 2024",
                 description: "Credit card payment",
                 reference: "TRX-5678901230",
-                amount: "2,000,000.00",
+                amount: "200.00",
               },
               {
                 date: "March 25, 2024",
-                description: "Mobile phone bill payment",
+                description: "Mobile phone bill",
                 reference: "TRX-2468135790",
-                amount: "1,200,000.00",
+                amount: "120.00",
               },
               {
                 date: "March 20, 2024",
                 description: "Charity donation",
                 reference: "TRX-1357924680",
-                amount: "1,000,000.00",
+                amount: "100.00",
               },
               {
                 date: "March 15, 2024",
                 description: "ATM Withdrawal",
                 reference: "TRX-3579246801",
-                amount: "700,000.00",
-              },
-              {
+                amount: "70.00",
+                              {
                 date: "March 10, 2024",
-                description: "Payment to ABC Corporation",
+                description: "Online shopping",
                 reference: "TRX-1357924680",
-                amount: "800,000.00",
+                amount: "420.00",
               },
               {
                 date: "March 5, 2024",
-                description: "Gift received from John Doe",
-                reference: "TRX-7894561230",
-                amount: "2,500,000.00",
+                description: "Grocery purchase",
+                reference: "TRX-5678901230",
+                amount: "260.00",
               },
               {
                 date: "March 1, 2024",
-                description: "Interest credited",
-                reference: "TRX-2468013579",
-                amount: "3,000,000.00",
+                description: "Utility bill",
+                reference: "TRX-2468135790",
+                amount: "180.00",
+              },
+              {
+                date: "February 28, 2024",
+                description: "Rent payment",
+                reference: "TRX-1357924680",
+                amount: "1,000.00",
               },
               {
                 date: "February 25, 2024",
-                description: "Stock purchase",
-                reference: "TRX-1357924680",
-                amount: "5,000,000.00",
+                description: "Car insurance",
+                reference: "TRX-3579246801",
+                amount: "300.00",
               },
               {
                 date: "February 20, 2024",
-                description: "Dividend received",
-                reference: "TRX-5678901230",
-                amount: "4,000,000.00",
+                description: "Gas station",
+                reference: "TRX-2468135790",
+                amount: "100.00",
               },
               {
                 date: "February 15, 2024",
-                description: "Refund from XYZ Store",
-                reference: "TRX-2468135790",
-                amount: "1,500,000.00",
+                description: "Restaurant bill",
+                reference: "TRX-1357924680",
+                amount: "75.00",
               },
               {
                 date: "February 10, 2024",
-                description: "Loan repayment",
-                reference: "TRX-1357924680",
-                amount: "2,500,000.00",
+                description: "Movie tickets",
+                reference: "TRX-5678901230",
+                amount: "45.00",
               },
               {
                 date: "February 5, 2024",
-                description: "Credit card payment",
-                reference: "TRX-3579246801",
-                amount: "2,000,000.00",
+                description: "Health insurance",
+                reference: "TRX-2468135790",
+                amount: "320.00",
               },
               {
                 date: "February 1, 2024",
-                description: "Mobile phone bill payment",
+                description: "Gym membership",
                 reference: "TRX-1357924680",
-                amount: "1,000,000.00",
+                amount: "90.00",
+              },
+              {
+                date: "January 31, 2024",
+                description: "Coffee shop",
+                reference: "TRX-3579246801",
+                amount: "25.00",
               },
               {
                 date: "January 25, 2024",
-                description: "Charity donation",
-                reference: "TRX-7894561230",
-                amount: "500,000.00",
+                description: "Music subscription",
+                reference: "TRX-2468135790",
+                amount: "15.00",
               },
               {
                 date: "January 20, 2024",
-                description: "ATM Withdrawal",
-                reference: "TRX-2468013579",
-                amount: "1,500,000.00",
+                description: "Bookstore",
+                reference: "TRX-1357924680",
+                amount: "50.00",
               },
               {
                 date: "January 15, 2024",
-                description: "Payment to ABC Corporation",
-                reference: "TRX-1357924680",
-                amount: "3,000,000.00",
+                description: "Flight ticket",
+                reference: "TRX-5678901230",
+                amount: "350.00",
               },
               {
                 date: "January 10, 2024",
-                description: "Gift received from Jane Doe",
-                reference: "TRX-5678901230",
-                amount: "6,000,000.00",
+                description: "Hotel stay",
+                reference: "TRX-2468135790",
+                amount: "600.00",
               },
               {
                 date: "January 5, 2024",
-                description: "Interest credited",
-                reference: "TRX-2468135790",
-                amount: "2,000,000.00",
+                description: "New Year Celebration",
+                reference: "TRX-1357924680",
+                amount: "200.00",
               },
               {
                 date: "January 1, 2024",
-                description: "Stock purchase",
-                reference: "TRX-1357924680",
-                amount: "7,000,000.00",
-              },
-              {
-                date: "December 25, 2023",
-                description: "Dividend received",
+                description: "Birthday Gift",
                 reference: "TRX-3579246801",
-                amount: "4,500,000.00",
-              },
-              {
-                date: "December 20, 2023",
-                description: "Refund from XYZ Store",
-                reference: "TRX-1357924680",
-                amount: "1,000,000.00",
-              },
-              {
-                date: "December 15, 2023",
-                description: "Loan repayment",
-                reference: "TRX-7894561230",
-                amount: "5,500,000.00",
-              },
-              {
-                date: "December 10, 2023",
-                description: "Credit card payment",
-                reference: "TRX-2468013579",
-                amount: "2,500,000.00",
-              },
-              {
-                date: "December 5, 2023",
-                description: "Mobile phone bill payment",
-                reference: "TRX-1357924680",
-                amount: "1,500,000.00",
-              },
-              {
-                date: "December 1, 2023",
-                description: "Charity donation",
-                reference: "TRX-5678901230",
-                amount: "1,200,000.00",
-              },
-              {
-                date: "November 25, 2023",
-                description: "ATM Withdrawal",
-                reference: "TRX-2468135790",
-                amount: "2,000,000.00",
-              },
-              {
-                date: "November 20, 2023",
-                description: "Payment to ABC Corporation",
-                reference: "TRX-1357924680",
-                amount: "4,000,000.00",
-              },
-              {
-                date: "November 15, 2023",
-                description: "Gift received from John Doe",
-                reference: "TRX-3579246801",
-                amount: "2,500,000.00",
-              },
-              {
-                date: "November 10, 2023",
-                description: "Interest credited",
-                reference: "TRX-1357924680",
-                amount: "3,000,000.00",
-              },
-              {
-                date: "November 5, 2023",
-                description: "Stock purchase",
-                reference: "TRX-7894561230",
-                amount: "6,000,000.00",
-              },
-              {
-                date: "November 1, 2023",
-                description: "Dividend received",
-                reference: "TRX-2468013579",
-                amount: "5,000,000.00",
-              },
-              {
-                date: "October 25, 2023",
-                description: "Refund from XYZ Store",
-                reference: "TRX-1357924680",
-                amount: "2,000,000.00",
-              },
-              {
-                date: "October 20, 2023",
-                description: "Loan repayment",
-                reference: "TRX-5678901230",
-                amount: "4,500,000.00",
-              },
-              {
-                date: "October 15, 2023",
-                description: "Credit card payment",
-                reference: "TRX-2468135790",
-                amount: "1,500,000.00",
-              },
+                amount: "100.00",
+              }
             ];
 
-            transactionData.slice(0, 60).forEach((transaction) => {
-              document.write(`
-                <div class="transaction-item">
-                  <div class="transaction-details">
-                    <span>Date: ${transaction.date}</span><br>
-                    <span>Description: ${transaction.description}</span><br>
-                    <span>Reference: ${transaction.reference}</span><br>
-                    <span class="transaction-amount">$ ${transaction.amount}</span>
-                  </div>
-                </div>
-              `);
+            const container = document.querySelector('.transaction-history');
+
+            transactionData.forEach((transaction) => {
+              const item = document.createElement('div');
+              item.classList.add('transaction-item');
+
+              const details = document.createElement('div');
+              details.classList.add('transaction-details');
+
+              details.innerHTML = `
+                <span>${transaction.date} - ${transaction.description}</span>
+                <span>${transaction.reference}</span>
+                <span class="transaction-amount">${transaction.amount}</span>
+              `;
+
+              item.appendChild(details);
+              container.appendChild(item);
             });
           </script>
         </div>
-        <a href="#">more &Uarrocir;</a>
       </div>
-      <a href="account.html" class="button">Back to Account</a>
     </main>
 
     <footer>
       <div class="footer-container">
         <div class="footer-links">
           <ul>
-            <li><a href="#privacy">Privacy Policy</a></li>
-            <li><a href="#terms">Terms of Service</a></li>
-            <li><a href="#help">Help & Support</a></li>
-            <li><a href="#faq">FAQ</a></li>
+            <li><a href="privacy.html">Privacy Policy</a></li>
+            <li><a href="terms.html">Terms & Conditions</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
           </ul>
         </div>
         <div class="contact-info">
-          <p>
-            Contact us at:
-            <a href="mailto:support@purebank.com">support@purebank.com</a>
-          </p>
-          <p>WhatsApp us: +1 212-555-0198</p>
+          <p>Email: <a href="mailto:support@purebank.com">support@purebank.com</a></p>
+          <p>Phone: +1 234 567 890</p>
         </div>
         <div class="social-media">
-          <a href="#">Facebook</a>
-          <a href="#">Twitter</a>
-          <a href="#">LinkedIn</a>
+          <a href="https://facebook.com/purebank" target="_blank"
+            ><i class="fab fa-facebook-f"></i
+          ></a>
+          <a href="https://twitter.com/purebank" target="_blank"
+            ><i class="fab fa-twitter"></i
+          ></a>
+          <a href="https://linkedin.com/company/purebank" target="_blank"
+            ><i class="fab fa-linkedin-in"></i
+          ></a>
         </div>
-        <div class="copyright">
-          <p>&copy; 2024 Pure Bank. All rights reserved.</p>
-        </div>
+      </div>
+      <div class="copyright">
+        <p>&copy; 2024 Pure Bank. All rights reserved.</p>
       </div>
     </footer>
   </body>
